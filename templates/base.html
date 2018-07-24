@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="utf-8">
+   {% block css %}{% load static %}<link rel="stylesheet" href="{% static 'css/style.css' %}" />{% endblock %}
+   <title>{% block title %}Orange | Forfaits mobiles, offres internet, TV, 4G et ligne fixe{% endblock %}</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+<body id="homepage">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+      <a class="navbar-brand" href="#">
+        {% load static %}
+        <img src="{% static 'images/logo-orange.png' %}" width="50" height="50"><span style="margin-left:10px">Orange</span>
+      </a>
+
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-bars"></i> Menu |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Espace client</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Assistance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Boutique</a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Rechercher dans la boutique" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+
+    </div>
+
+  </nav>
+
+  <div class="navbar navbar-expand-lg navbar-light">
+    <ul class="navbar-nav second-navbar">
+        <li class="nav-item active text-center"  style="width: 10.7071%;">
+          <a class="nav-link disabled" href="#">Internet |</a>
+        </li>
+        <li class="nav-item active text-center"  style="width: 10%;">
+          <a class="nav-link disabled" href="#">Mobile |</a>
+        </li>
+        <li class="nav-item active text-center"  style="width: 17.3737%;">
+          <a class="nav-link disabled" href="#">Internet + Mobile |</a>
+        </li>
+        <li class="nav-item active text-center"  style="width: 14.3434%;">
+          <a class="nav-link disabled" href="#">TV d'Orange |</a>
+        </li>
+        <li class="nav-item active text-center"  style="width: 8.28283%;">
+          <a class="nav-link disabled" href="#">Fixe |</a>
+        </li>
+        <li class="nav-item active text-center"  style="width: 13.8384%;">
+          <a class="nav-link disabled" href="#">Accessoires |</a>
+        </li>
+        <li class="nav-item active text-center"  style="width: 13.1313%;">
+          <a class="nav-link disabled" href="#">Bons plans |</a>
+        </li>
+        <li class="nav-item active text-center"  style="width: 12.3232%;">
+          <a class="nav-link disabled" href="#">Boutiques</a>
+        </li>
+      </ul>
+  </div>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+<footer></footer>
+{% block script %}{% endblock %}
+</body>
+</html>

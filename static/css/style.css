@@ -1,0 +1,75 @@
+#navbarTogglerDemo01{
+	margin-left:300px;
+}
+.navbar-nav{
+	margin-left:50px;
+}
+.form-inline{
+	margin-right:300px;
+}
+.second-navbar{
+	margin-left:300px;
+	width:900px;
+}
+#content {
+	margin-left:300px;
+	margin-right:300px;
+}
+.Slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slide {
+    display: flex;
+    width: 100%; 
+}
+.img_slide2{
+	width:100%;
+	height:250px;
+}
+.avant, .apres {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    margin-top: auto;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0; 
+}
+.avant {
+    right: 0px;
+    border-radius: 3px 0 0 3px; 
+}
+.avant:hover, .apres:hover {
+    background-color: white; 
+}
+.petitp {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease; 
+}
+.activ, .petitp:hover {
+    background-color: #717171; 
+}
+.point {
+    margin-left: 430px; 
+}
+.recherche{
+	display: flex;
+	justify-content: space-between;
+	margin-top:20px;
+}
+.texte_image{
+	text-align: center;
+}
+
+

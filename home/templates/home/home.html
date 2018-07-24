@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="Slider">
+
+            <div class="slide fad">
+                    <div class="test">
+                        <div class="position">
+                            {% load static %}<img src="{% static 'images/banner1.png' %}" class="img_slide2">
+                        </div>
+                    </div>
+            </div>
+
+            <div class="slide fad">
+                    <div class="test">
+                        <div class="position">
+                            {% load static %}<img src="{% static 'images/banner2.png' %}" class="img_slide2">
+                        </div>
+                    </div>
+            </div>
+
+            <div class="slide fad">
+                    <div class="test">
+                        <div class="position">
+                            {% load static %}<img src="{% static 'images/banner3.png' %}" class="img_slide2">
+                        </div>
+                    </div>
+            </div>
+
+            <a class="apres" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="avant" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+        <div class="point">
+          <span class="petitp" onclick="currentSlide(1)"></span>
+          <span class="petitp" onclick="currentSlide(2)"></span>
+          <span class="petitp" onclick="currentSlide(3)"></span>
+        </div>
+
+    <h1 class="firstTitle">Bienvenue chez Orange, que cherchez-vous ?</h1>
+    <div class="recherche">
+                <div class="recherche1">
+                    <div class="img_recherche">{% load static %}<img src="{% static 'images/recherche1.png' %}"></div>
+                    <div class="texte_image">
+                        <div class="texte_img1">Internet</div>
+                    </div>
+                </div>
+
+                <div class="recherche2">
+                    <div class="img_recherche">{% load static %}<img src="{% static 'images/recherche2.png' %}"></div>
+                    <div class="texte_image">
+                        <div class="texte_img1">Mobile</div>
+                    </div>
+                </div>
+
+                <div class="recherche3">
+                    <div class="img_recherche">{% load static %}<img src="{% static 'images/recherche3.png' %}"></div>
+                    <div class="texte_image">
+                        <div class="texte_img1">Internet + Mobile</div>
+                    </div>
+                </div>
+
+                <div class="recherche4">
+                    <div class="img_recherche">{% load static %}<img src="{% static 'images/recherche4.png' %}"></div>
+                    <div class="texte_image">
+                        <div class="texte_img1">TV d'Orange</div>
+                    </div>
+                </div>
+
+                <div class="recherche5">
+                    <div class="img_recherche">{% load static %}<img src="{% static 'images/recherche5.png' %}"></div>
+                    <div class="texte_image">
+                        <div class="texte_img1">Accessoires</div>
+                    </div>
+                </div>
+    </div>
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("slide");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        } 
+
+</script>
+{% endblock %}
